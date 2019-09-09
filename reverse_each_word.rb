@@ -9,5 +9,9 @@ def reverse_each_word(str)
 
 #using .collect method
   def reverse_each_word(str)
-  str.split(" ").collect {|val| val.reverse}.join(" ")
+  str = str.split(" ").collect {|val| val.reverse}
+  str.join(" ")
+=begin note to self: since implicit return no need for str = str
+just use => str.split(" ").collect {|val| val.reverse}.join(" ")
+=end
   end
